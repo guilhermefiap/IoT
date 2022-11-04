@@ -1,0 +1,125 @@
+site_name: IoT
+site_author: Arnaldo Viana
+repo_url: https://github.com/arnaldojr/IoT/
+repo_name: "IoT"
+site_url: https://arnaldojr.github.io/IoT/ 
+copyright: 'Copyright &copy; Arnaldo Viana @ FIAP'
+
+extra:
+    materia: Disruptive Architectures IA and IoT
+    professor: Arnaldo Viana
+    ano: 2022
+
+theme:
+  name: active-handout
+  #custom_dir: overrides
+  features:
+    - content.code.annotate
+
+docs_dir: material
+site_dir: docs
+
+# Extensions / plugins
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/gh/insper-education/active-handout-plugins-js@main/package/plugin-bundle.js
+
+extra:
+  ihandout_config:
+#    counter:
+#      - question
+#      - tip
+#      - exercise
+#      - example
+    report:
+      api-base: https://devlife.insper-comp.com.br/api/offerings/1/
+      url: https://devlife.insper-comp.com.br/api/offerings/1/exercises/
+
+# Extensions / plugins
+plugins:
+  - git-revision-date-localized
+  - search
+  - mkdocs-jupyter:
+      execute: False
+
+markdown_extensions:
+  - markdown.extensions.tables
+  - tables
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: code
+      check_paths: true
+
+
+nav:
+  - Home: index.md
+  - Instalação: guias/instalacao.md
+  - Agenda: programacao/agenda.md
+  - Laboratórios: 
+    - Lab01: aulas/lab1/index.md 
+    - Lab02: aulas/lab2/index.md 
+    - Lab03: aulas/lab3/index.md
+    - Lab04: aulas/lab4/TTS-STT.ipynb
+    - Lab05: aulas/lab5/index.md   
+    - Lab06: aulas/lab6/index.md  
+    - Lab07: aulas/lab7/index.md
+    - Lab08: aulas/lab8/index.md       
+  - NAC:
+ #   - CheckPoint3: checkpoint3/index.md
+    - NAC4: NAC4/index.md    
+  - Exemplos:
+    - Básicos - HelloWorld:
+      - Pisca LED: exemplos/0.helloworld/ex1/index.md
+      - LED e BOTÃO: exemplos/0.helloworld/ex2/hello2.ino
+      - Entrada Analógica: exemplos/0.helloworld/ex3/hello3.ino
+      - Função Millis: exemplos/0.helloworld/ex4-millis/millis.ino
+      - Serial LED: exemplos/3.serial_led/serial_led.ino
+      - INTERRUPÇÃO DE PINO: exemplos/0.helloworld/ex5-interrup/interrup.ino
+    - Frequêncimetro: exemplos/1.frequencimetro/1.frequencimetro.rar 
+    - Display OLED: exemplos/2.ad_disp_pwm/2.ad_disp_pwm.rar 
+    - Servo Motor: exemplos/4.servo_motor/serial_servo.ino
+    - Sensor Ultrassônico:
+      - Código Arduino:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.ino
+      - SimulIDE:  exemplos/6.sensor_ultrassonico/serial_ultrassonico.simu
+      - Biblioteca: exemplos/6.sensor_ultrassonico/Ultrasonic-master.zip      
+    - Jogo da memória: aulas/lab3/jogomemoria/jogomemoria.ino
+    - Pyton-Arduino:
+      - Código Python: exemplos/5.py-ard/py-ard.py
+      - Código Arduino: exemplos/5.py-ard\py-ard.ino
+      - SimulIDE: exemplos/5.py-ard/py-ard.simu
+    - Serial-JSON:
+      - TX: exemplos/7.serial_json/serial_json/serial_json_envia/serial_analog.ino
+      - RX: exemplos/7.serial_json/serial_json/serial_json_recebe/serial_json_recebe.ino
+  - Dicas: 
+    - Cheat Sheet: aulas/Dicas/Arduino-Cheat-Sheet.pdf
+    - Dicas de projetos: aulas/Dicas/dicas-projetos.md
